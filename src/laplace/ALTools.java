@@ -33,4 +33,14 @@ public class ALTools {
         return al.get(al.size() - 1) - al.get(0);
     }
 
+    public static ArrayList<Integer> getValuesSup(ArrayList<Integer> al, int val){
+        ArrayList<Integer> alSorted = new ArrayList<>();
+        for (int data: al) {
+            if(data >= val ){
+                alSorted.add(data);
+            }
+        }
+        return alSorted;
+    }
+
 }

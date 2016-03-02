@@ -1,17 +1,18 @@
 package laplace;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class LaunchMe {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws BudgetException{
 
 		/* Taille du tableau */
         int n = 20;
 		/* Valeur maximale que pourra atteindre les variables du tableau */
-        int m = 500;
+        int m = 20;
 		/* Paramètre de confidentialité */
-        int espi;
+        int epsi;
 
         ArrayList<Integer> integerTab = new ArrayList<>();
 
@@ -20,14 +21,18 @@ public class LaunchMe {
         }
 
         System.out.println(integerTab.toString());
-        System.out.println(ALTools.range(integerTab));
 
-        /*ArrayList<Double> alDoubles = new ArrayList<>();
-        for (int j = 0; j < 10000; j++) {
-            alDoubles.add(RandomDouble.randomDouble(-0.5, 0.5));
-        }
-        System.out.print(ALTools.meanAL(alDoubles));*/
+        /*Laplace lplc = new Laplace(0.01);
+        System.out.println("Budget restant : " + lplc.getBudget());
 
+        Laplace lplcboucle = new Laplace(0.01);
+        while(lplcboucle.getBudget() > 0){
+            lplcboucle.genNoise(1, 0.25);
+            System.out.println(lplcboucle.toString());
+        }*/
+
+        System.out.println(ALTools.getValuesSup(integerTab, (m/2)).toString());
     }
+
 
 }
