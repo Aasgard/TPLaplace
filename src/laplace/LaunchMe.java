@@ -9,7 +9,7 @@ public class LaunchMe {
 		/* Taille du tableau */
         int n = 20;
 		/* Valeur maximale que pourra atteindre les variables du tableau */
-        int m = 13;
+        int m = 500;
 		/* Paramètre de confidentialité */
         int espi;
 
@@ -20,14 +20,13 @@ public class LaunchMe {
         }
 
         System.out.println(integerTab.toString());
+        System.out.println(ALTools.range(integerTab));
 
-        ArrayList<Double> alDoubles = new ArrayList<>();
-
-        for (int j = 0; j < 2000; j++) {
+        /*ArrayList<Double> alDoubles = new ArrayList<>();
+        for (int j = 0; j < 10000; j++) {
             alDoubles.add(RandomDouble.randomDouble(-0.5, 0.5));
         }
-
-        System.out.print(ALTools.meanAL(alDoubles));
+        System.out.print(ALTools.meanAL(alDoubles));*/
 
     }
 
