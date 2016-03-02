@@ -3,9 +3,11 @@ package laplace;
 public class Laplace {
 	
 	private int epsilon;
+	private boolean testMode;
 	
 	public Laplace(int e){
 		this.epsilon = e;
+		this.testMode = false;
 	}
 	
 	public double genNoise(int sensi, double propconso){
